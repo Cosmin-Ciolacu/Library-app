@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+
+    app:startDestination="@id/loginFragment">
+    <!--    Primul fragment "app:startDestination" pe care il deschide-->
+
+
+    <!--    Fragmentul de login-->
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.firstapplication.myfristapplicationandroid.fragments.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_loginForm"
+            app:destination="@id/loginForm" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFormFragment"
+            app:destination="@id/registerFormFragment" />
+
+    </fragment>
+    <!--    Fragmentul de Register-->
+
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.firstapplication.myfristapplicationandroid.fragments.BooksFragment"
+        android:label="ProductsFragment"
+        tools:layout="@layout/fragment_books"/>
+    <fragment
+        android:id="@+id/loginForm"
+        android:name="com.firstapplication.myfristapplicationandroid.fragments.LoginForm"
+        android:label="fragment_login_form"
+        tools:layout="@layout/fragment_login_form" >
+        <action
+            android:id="@+id/action_loginForm_to_registerFormFragment"
+            app:destination="@id/registerFormFragment" />
+        <action
+            android:id="@+id/action_loginForm_to_productsFragment"
+            app:destination="@id/productsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFormFragment"
+        android:name="com.firstapplication.myfristapplicationandroid.fragments.RegisterFormFragment"
+        android:label="fragment_register_form"
+        tools:layout="@layout/fragment_register_form" >
+        <action
+            android:id="@+id/action_registerFormFragment_to_loginForm"
+            app:destination="@id/loginForm" />
+        <action
+            android:id="@+id/action_registerFormFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+    </fragment>
+
+
+</navigation>
