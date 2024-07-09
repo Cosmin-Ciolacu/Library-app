@@ -84,7 +84,7 @@ class LoginForm : Fragment() {
     }
 
     private fun callLoginApi(email: String?, password: String?) {
-        val url = "https://wsgpbhkdot.sharedwithexpose.com/api/auth/login";
+        val url = "http://library-app-api.primera.agency/api/auth/login";
         val requestQueue = Volley.newRequestQueue(requireContext())
 
         val parameters = HashMap<String, String>()

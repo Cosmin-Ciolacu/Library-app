@@ -76,7 +76,7 @@ class RegisterFormFragment : Fragment() {
     }
 
     private fun callRegisterApi(name: String, email: String, password: String) {
-        val url = "https://wsgpbhkdot.sharedwithexpose.com/api/auth/register"
+        val url = "http://library-app-api.primera.agency/api/auth/register"
         val requestQueue = Volley.newRequestQueue(requireContext())
 
         val parameters = HashMap<String, String>()

@@ -38,7 +38,7 @@ class BooksFragment: Fragment() {
        val sharedPrefManager = SharedPrefManager(requireContext())
 
         val token = sharedPrefManager.getToken()
-        val url = "https://wsgpbhkdot.sharedwithexpose.com/api/books"
+        val url = "http://library-app-api.primera.agency/api/books"
         val requestQueue = Volley.newRequestQueue(requireContext())
 
         val booksRequest = object: StringRequest(
